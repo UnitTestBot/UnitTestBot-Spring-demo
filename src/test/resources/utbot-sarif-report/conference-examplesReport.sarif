@@ -1,0 +1,753 @@
+{
+  "$schema" : "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version" : "2.1.0",
+  "runs" : [ {
+    "tool" : {
+      "driver" : {
+        "name" : "UnitTestBot",
+        "organization" : "utbot.org",
+        "version" : "1.0",
+        "rules" : [ ]
+      }
+    },
+    "results" : [ ]
+  }, {
+    "tool" : {
+      "driver" : {
+        "name" : "UnitTestBot",
+        "organization" : "utbot.org",
+        "version" : "1.0",
+        "rules" : [ ]
+      }
+    },
+    "results" : [ ]
+  }, {
+    "tool" : {
+      "driver" : {
+        "name" : "UnitTestBot",
+        "organization" : "utbot.org",
+        "version" : "1.0",
+        "rules" : [ {
+          "id" : "utbot.exception.NullPointerException",
+          "name" : "NullPointerException",
+          "shortDescription" : {
+            "text" : "Unexpected NullPointerException detected."
+          },
+          "fullDescription" : {
+            "text" : "Seems like an exception NullPointerException might be thrown."
+          },
+          "help" : {
+            "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html"
+          }
+        } ]
+      }
+    },
+    "results" : [ {
+      "ruleId" : "utbot.exception.NullPointerException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unexpected NullPointerException.\nTest case: `checkIfNotEmpty(null)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/main/java/com/rest/order/no/spring/error/suite/ArrayListVerifier.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 7,
+            "startColumn" : 9
+          }
+        }
+      }, {
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "com.rest.order.no.spring.error.suite.ArrayListVerifier"
+        } ]
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/test/java/com/rest/order/no/spring/error/suite/ArrayListVerifierTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 64,
+            "startColumn" : 5
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "ArrayListVerifierTest.testCheckIfNotEmpty_ThrowNullPointerException(ArrayListVerifierTest.java:69)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/test/java/com/rest/order/no/spring/error/suite/ArrayListVerifierTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 69,
+                  "startColumn" : 9
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "com.rest.order.no.spring.error.suite.ArrayListVerifier.checkIfNotEmpty(ArrayListVerifier.java:7)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/main/java/com/rest/order/no/spring/error/suite/ArrayListVerifier.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 7,
+                  "startColumn" : 9
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    } ]
+  }, {
+    "tool" : {
+      "driver" : {
+        "name" : "UnitTestBot",
+        "organization" : "utbot.org",
+        "version" : "1.0",
+        "rules" : [ {
+          "id" : "utbot.exception.NullPointerException",
+          "name" : "NullPointerException",
+          "shortDescription" : {
+            "text" : "Unexpected NullPointerException detected."
+          },
+          "fullDescription" : {
+            "text" : "Seems like an exception NullPointerException might be thrown."
+          },
+          "help" : {
+            "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html"
+          }
+        }, {
+          "id" : "utbot.exception.ArrayIndexOutOfBoundsException",
+          "name" : "ArrayIndexOutOfBoundsException",
+          "shortDescription" : {
+            "text" : "Unexpected ArrayIndexOutOfBoundsException detected."
+          },
+          "fullDescription" : {
+            "text" : "Seems like an exception ArrayIndexOutOfBoundsException might be thrown."
+          },
+          "help" : {
+            "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/ArrayIndexOutOfBoundsException.html"
+          }
+        } ]
+      }
+    },
+    "results" : [ {
+      "ruleId" : "utbot.exception.NullPointerException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unexpected NullPointerException.\nTest case: `readBytes(null, null)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/main/java/com/rest/order/no/spring/mocks/CustomByteReader.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 8,
+            "startColumn" : 9
+          }
+        }
+      }, {
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "com.rest.order.no.spring.mocks.CustomByteReader"
+        } ]
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/test/java/com/rest/order/no/spring/mocks/CustomByteReaderTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 62,
+            "startColumn" : 5
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "CustomByteReaderTest.testReadBytes5(CustomByteReaderTest.java:65)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/test/java/com/rest/order/no/spring/mocks/CustomByteReaderTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 65,
+                  "startColumn" : 9
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "com.rest.order.no.spring.mocks.CustomByteReader.readBytes(CustomByteReader.java:8)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/main/java/com/rest/order/no/spring/mocks/CustomByteReader.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 8,
+                  "startColumn" : 9
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    }, {
+      "ruleId" : "utbot.exception.ArrayIndexOutOfBoundsException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unexpected ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0.\nTest case: `readBytes([], <DataProvider>)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/main/java/com/rest/order/no/spring/mocks/CustomByteReader.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 9,
+            "startColumn" : 13
+          }
+        }
+      }, {
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "com.rest.order.no.spring.mocks.CustomByteReader"
+        } ]
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/test/java/com/rest/order/no/spring/mocks/CustomByteReaderTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 41,
+            "startColumn" : 5
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "CustomByteReaderTest.testReadBytes3(CustomByteReaderTest.java:48)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/test/java/com/rest/order/no/spring/mocks/CustomByteReaderTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 48,
+                  "startColumn" : 9
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "com.rest.order.no.spring.mocks.CustomByteReader.readBytes(CustomByteReader.java:9)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/main/java/com/rest/order/no/spring/mocks/CustomByteReader.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 9,
+                  "startColumn" : 13
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    }, {
+      "ruleId" : "utbot.exception.NullPointerException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unexpected NullPointerException.\nTest case: `readBytes(null, <DataProvider>)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/main/java/com/rest/order/no/spring/mocks/CustomByteReader.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 9,
+            "startColumn" : 13
+          }
+        }
+      }, {
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "com.rest.order.no.spring.mocks.CustomByteReader"
+        } ]
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/test/java/com/rest/order/no/spring/mocks/CustomByteReaderTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 52,
+            "startColumn" : 5
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "CustomByteReaderTest.testReadBytes4(CustomByteReaderTest.java:58)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/test/java/com/rest/order/no/spring/mocks/CustomByteReaderTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 58,
+                  "startColumn" : 9
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "com.rest.order.no.spring.mocks.CustomByteReader.readBytes(CustomByteReader.java:9)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/main/java/com/rest/order/no/spring/mocks/CustomByteReader.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 9,
+                  "startColumn" : 13
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    } ]
+  }, {
+    "tool" : {
+      "driver" : {
+        "name" : "UnitTestBot",
+        "organization" : "utbot.org",
+        "version" : "1.0",
+        "rules" : [ ]
+      }
+    },
+    "results" : [ ]
+  }, {
+    "tool" : {
+      "driver" : {
+        "name" : "UnitTestBot",
+        "organization" : "utbot.org",
+        "version" : "1.0",
+        "rules" : [ ]
+      }
+    },
+    "results" : [ ]
+  }, {
+    "tool" : {
+      "driver" : {
+        "name" : "UnitTestBot",
+        "organization" : "utbot.org",
+        "version" : "1.0",
+        "rules" : [ {
+          "id" : "utbot.exception.NullPointerException",
+          "name" : "NullPointerException",
+          "shortDescription" : {
+            "text" : "Unexpected NullPointerException detected."
+          },
+          "fullDescription" : {
+            "text" : "Seems like an exception NullPointerException might be thrown."
+          },
+          "help" : {
+            "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html"
+          }
+        } ]
+      }
+    },
+    "results" : [ {
+      "ruleId" : "utbot.exception.NullPointerException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unexpected NullPointerException.\nTest case: `checkIfNotEmpty(null)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/main/java/com/rest/order/standard/flow/error/suite/ArrayListVerifier.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 7,
+            "startColumn" : 9
+          }
+        }
+      }, {
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "com.rest.order.standard.flow.error.suite.ArrayListVerifier"
+        } ]
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/test/java/com/rest/order/standard/flow/error/suite/ArrayListVerifierTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 40,
+            "startColumn" : 5
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "ArrayListVerifierTest.testCheckIfNotEmpty3(ArrayListVerifierTest.java:45)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/test/java/com/rest/order/standard/flow/error/suite/ArrayListVerifierTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 45,
+                  "startColumn" : 9
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "com.rest.order.standard.flow.error.suite.ArrayListVerifier.checkIfNotEmpty(ArrayListVerifier.java:7)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/main/java/com/rest/order/standard/flow/error/suite/ArrayListVerifier.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 7,
+                  "startColumn" : 9
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    } ]
+  }, {
+    "tool" : {
+      "driver" : {
+        "name" : "UnitTestBot",
+        "organization" : "utbot.org",
+        "version" : "1.0",
+        "rules" : [ {
+          "id" : "utbot.exception.NullPointerException",
+          "name" : "NullPointerException",
+          "shortDescription" : {
+            "text" : "Unexpected NullPointerException detected."
+          },
+          "fullDescription" : {
+            "text" : "Seems like an exception NullPointerException might be thrown."
+          },
+          "help" : {
+            "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html"
+          }
+        }, {
+          "id" : "utbot.exception.TimeoutException",
+          "name" : "TimeoutException",
+          "shortDescription" : {
+            "text" : "Unexpected TimeoutException detected."
+          },
+          "fullDescription" : {
+            "text" : "Seems like an exception TimeoutException might be thrown."
+          },
+          "help" : {
+            "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/TimeoutException.html"
+          }
+        } ]
+      }
+    },
+    "results" : [ {
+      "ruleId" : "utbot.exception.NullPointerException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unexpected NullPointerException.\nTest case: `getNonEmptyCollection(null)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/main/java/com/rest/order/standard/flow/error/suite/Lists.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 7,
+            "startColumn" : 9
+          }
+        }
+      }, {
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "com.rest.order.standard.flow.error.suite.Lists"
+        } ]
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/test/java/com/rest/order/standard/flow/error/suite/ListsTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 80,
+            "startColumn" : 5
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "ListsTest.testGetNonEmptyCollection_ThrowNullPointerException(ListsTest.java:85)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/test/java/com/rest/order/standard/flow/error/suite/ListsTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 85,
+                  "startColumn" : 9
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "com.rest.order.standard.flow.error.suite.Lists.getNonEmptyCollection(Lists.java:7)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/main/java/com/rest/order/standard/flow/error/suite/Lists.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 7,
+                  "startColumn" : 9
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    }, {
+      "ruleId" : "utbot.exception.TimeoutException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unexpected behavior: Timeout -9 ms for phase InvocationPhase elapsed, controller timeout - 13.\nTest case: `getNonEmptyCollection(<ArrayList>)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/main/java/com/rest/order/standard/flow/error/suite/Lists.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 6,
+            "startColumn" : 5
+          }
+        }
+      }, {
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "com.rest.order.standard.flow.error.suite.Lists"
+        } ]
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/test/java/com/rest/order/standard/flow/error/suite/ListsTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 98,
+            "startColumn" : 5
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "ListsTest.testGetNonEmptyCollection(ListsTest.java:47)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/test/java/com/rest/order/standard/flow/error/suite/ListsTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 47,
+                  "startColumn" : 9
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    } ]
+  }, {
+    "tool" : {
+      "driver" : {
+        "name" : "UnitTestBot",
+        "organization" : "utbot.org",
+        "version" : "1.0",
+        "rules" : [ {
+          "id" : "utbot.exception.TimeoutException",
+          "name" : "TimeoutException",
+          "shortDescription" : {
+            "text" : "Unexpected TimeoutException detected."
+          },
+          "fullDescription" : {
+            "text" : "Seems like an exception TimeoutException might be thrown."
+          },
+          "help" : {
+            "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/TimeoutException.html"
+          }
+        } ]
+      }
+    },
+    "results" : [ {
+      "ruleId" : "utbot.exception.TimeoutException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unexpected behavior: Timeout 0 ms for phase StatisticsCollectionPhase elapsed, controller timeout - 1.\nTest case: `max(-33554449, 67109123)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/main/java/com/rest/order/standard/flow/IntComparator.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 4,
+            "startColumn" : 5
+          }
+        }
+      }, {
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "com.rest.order.standard.flow.IntComparator"
+        } ]
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/test/java/com/rest/order/standard/flow/IntComparatorTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 64,
+            "startColumn" : 5
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "IntComparatorTest.testMax(IntComparatorTest.java:33)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/test/java/com/rest/order/standard/flow/IntComparatorTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 33,
+                  "startColumn" : 9
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    } ]
+  }, {
+    "tool" : {
+      "driver" : {
+        "name" : "UnitTestBot",
+        "organization" : "utbot.org",
+        "version" : "1.0",
+        "rules" : [ ]
+      }
+    },
+    "results" : [ ]
+  }, {
+    "tool" : {
+      "driver" : {
+        "name" : "UnitTestBot",
+        "organization" : "utbot.org",
+        "version" : "1.0",
+        "rules" : [ ]
+      }
+    },
+    "results" : [ ]
+  }, {
+    "tool" : {
+      "driver" : {
+        "name" : "UnitTestBot",
+        "organization" : "utbot.org",
+        "version" : "1.0",
+        "rules" : [ ]
+      }
+    },
+    "results" : [ ]
+  } ]
+}

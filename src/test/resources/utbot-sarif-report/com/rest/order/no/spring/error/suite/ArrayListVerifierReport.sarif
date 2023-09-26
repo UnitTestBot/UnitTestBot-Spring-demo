@@ -1,0 +1,99 @@
+{
+  "$schema" : "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version" : "2.1.0",
+  "runs" : [ {
+    "tool" : {
+      "driver" : {
+        "name" : "UnitTestBot",
+        "organization" : "utbot.org",
+        "version" : "1.0",
+        "rules" : [ {
+          "id" : "utbot.exception.NullPointerException",
+          "name" : "NullPointerException",
+          "shortDescription" : {
+            "text" : "Unexpected NullPointerException detected."
+          },
+          "fullDescription" : {
+            "text" : "Seems like an exception NullPointerException might be thrown."
+          },
+          "help" : {
+            "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html"
+          }
+        } ]
+      }
+    },
+    "results" : [ {
+      "ruleId" : "utbot.exception.NullPointerException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unexpected NullPointerException.\nTest case: `checkIfNotEmpty(null)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/main/java/com/rest/order/no/spring/error/suite/ArrayListVerifier.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 7,
+            "startColumn" : 9
+          }
+        }
+      }, {
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "com.rest.order.no.spring.error.suite.ArrayListVerifier"
+        } ]
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/test/java/com/rest/order/no/spring/error/suite/ArrayListVerifierTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 64,
+            "startColumn" : 5
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "ArrayListVerifierTest.testCheckIfNotEmpty_ThrowNullPointerException(ArrayListVerifierTest.java:69)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/test/java/com/rest/order/no/spring/error/suite/ArrayListVerifierTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 69,
+                  "startColumn" : 9
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "com.rest.order.no.spring.error.suite.ArrayListVerifier.checkIfNotEmpty(ArrayListVerifier.java:7)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/main/java/com/rest/order/no/spring/error/suite/ArrayListVerifier.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 7,
+                  "startColumn" : 9
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    } ]
+  } ]
+}

@@ -1,0 +1,83 @@
+{
+  "$schema" : "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version" : "2.1.0",
+  "runs" : [ {
+    "tool" : {
+      "driver" : {
+        "name" : "UnitTestBot",
+        "organization" : "utbot.org",
+        "version" : "1.0",
+        "rules" : [ {
+          "id" : "utbot.exception.TimeoutException",
+          "name" : "TimeoutException",
+          "shortDescription" : {
+            "text" : "Unexpected TimeoutException detected."
+          },
+          "fullDescription" : {
+            "text" : "Seems like an exception TimeoutException might be thrown."
+          },
+          "help" : {
+            "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/TimeoutException.html"
+          }
+        } ]
+      }
+    },
+    "results" : [ {
+      "ruleId" : "utbot.exception.TimeoutException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unexpected behavior: Timeout 0 ms for phase StatisticsCollectionPhase elapsed, controller timeout - 1.\nTest case: `max(-33554449, 67109123)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/main/java/com/rest/order/standard/flow/IntComparator.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 4,
+            "startColumn" : 5
+          }
+        }
+      }, {
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "com.rest.order.standard.flow.IntComparator"
+        } ]
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/test/java/com/rest/order/standard/flow/IntComparatorTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 64,
+            "startColumn" : 5
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "IntComparatorTest.testMax(IntComparatorTest.java:33)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/test/java/com/rest/order/standard/flow/IntComparatorTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 33,
+                  "startColumn" : 9
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    } ]
+  } ]
+}

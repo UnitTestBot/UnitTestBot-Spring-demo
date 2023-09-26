@@ -1,0 +1,255 @@
+{
+  "$schema" : "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version" : "2.1.0",
+  "runs" : [ {
+    "tool" : {
+      "driver" : {
+        "name" : "UnitTestBot",
+        "organization" : "utbot.org",
+        "version" : "1.0",
+        "rules" : [ {
+          "id" : "utbot.exception.NullPointerException",
+          "name" : "NullPointerException",
+          "shortDescription" : {
+            "text" : "Unexpected NullPointerException detected."
+          },
+          "fullDescription" : {
+            "text" : "Seems like an exception NullPointerException might be thrown."
+          },
+          "help" : {
+            "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html"
+          }
+        }, {
+          "id" : "utbot.exception.ArrayIndexOutOfBoundsException",
+          "name" : "ArrayIndexOutOfBoundsException",
+          "shortDescription" : {
+            "text" : "Unexpected ArrayIndexOutOfBoundsException detected."
+          },
+          "fullDescription" : {
+            "text" : "Seems like an exception ArrayIndexOutOfBoundsException might be thrown."
+          },
+          "help" : {
+            "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/ArrayIndexOutOfBoundsException.html"
+          }
+        } ]
+      }
+    },
+    "results" : [ {
+      "ruleId" : "utbot.exception.NullPointerException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unexpected NullPointerException.\nTest case: `readBytes(null, null)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/main/java/com/rest/order/no/spring/mocks/CustomByteReader.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 8,
+            "startColumn" : 9
+          }
+        }
+      }, {
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "com.rest.order.no.spring.mocks.CustomByteReader"
+        } ]
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/test/java/com/rest/order/no/spring/mocks/CustomByteReaderTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 62,
+            "startColumn" : 5
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "CustomByteReaderTest.testReadBytes5(CustomByteReaderTest.java:65)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/test/java/com/rest/order/no/spring/mocks/CustomByteReaderTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 65,
+                  "startColumn" : 9
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "com.rest.order.no.spring.mocks.CustomByteReader.readBytes(CustomByteReader.java:8)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/main/java/com/rest/order/no/spring/mocks/CustomByteReader.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 8,
+                  "startColumn" : 9
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    }, {
+      "ruleId" : "utbot.exception.ArrayIndexOutOfBoundsException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unexpected ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0.\nTest case: `readBytes([], <DataProvider>)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/main/java/com/rest/order/no/spring/mocks/CustomByteReader.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 9,
+            "startColumn" : 13
+          }
+        }
+      }, {
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "com.rest.order.no.spring.mocks.CustomByteReader"
+        } ]
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/test/java/com/rest/order/no/spring/mocks/CustomByteReaderTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 41,
+            "startColumn" : 5
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "CustomByteReaderTest.testReadBytes3(CustomByteReaderTest.java:48)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/test/java/com/rest/order/no/spring/mocks/CustomByteReaderTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 48,
+                  "startColumn" : 9
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "com.rest.order.no.spring.mocks.CustomByteReader.readBytes(CustomByteReader.java:9)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/main/java/com/rest/order/no/spring/mocks/CustomByteReader.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 9,
+                  "startColumn" : 13
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    }, {
+      "ruleId" : "utbot.exception.NullPointerException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unexpected NullPointerException.\nTest case: `readBytes(null, <DataProvider>)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/main/java/com/rest/order/no/spring/mocks/CustomByteReader.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 9,
+            "startColumn" : 13
+          }
+        }
+      }, {
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "com.rest.order.no.spring.mocks.CustomByteReader"
+        } ]
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/test/java/com/rest/order/no/spring/mocks/CustomByteReaderTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 52,
+            "startColumn" : 5
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "CustomByteReaderTest.testReadBytes4(CustomByteReaderTest.java:58)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/test/java/com/rest/order/no/spring/mocks/CustomByteReaderTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 58,
+                  "startColumn" : 9
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "com.rest.order.no.spring.mocks.CustomByteReader.readBytes(CustomByteReader.java:9)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/main/java/com/rest/order/no/spring/mocks/CustomByteReader.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 9,
+                  "startColumn" : 13
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    } ]
+  } ]
+}
