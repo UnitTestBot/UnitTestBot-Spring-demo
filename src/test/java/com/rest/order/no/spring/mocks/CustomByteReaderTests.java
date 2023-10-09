@@ -9,7 +9,6 @@ import static org.mockito.Mockito.when;
 public final class CustomByteReaderTests {
     ///region Test suites for executable com.rest.order.no.spring.mocks.CustomByteReader.readBytes
 
-
     @Test
     public void testReadBytes1() {
         byte[] buffer = {Byte.MIN_VALUE};

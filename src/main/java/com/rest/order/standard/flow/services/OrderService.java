@@ -13,9 +13,18 @@ public class OrderService {
     @Autowired
     private OrderRepository orderRepository;
 
+    /**
+     * This method is used to show basic ideas of Spring
+     * services or DAO classes testing in UnitTestBot.
+     *
+     * Generating unit tests, we should mock the behaviour
+     * of external calls and test the internal logic.
+     */
     public boolean isMajorityExpensive(int threshold) {
+        // external call to be mocked
         List<Order> allOrders = orderRepository.findAll();
 
+        // internal logic to be tested (up to the end of method)
         if (allOrders.isEmpty()) {
             return false;
         }
@@ -30,8 +39,20 @@ public class OrderService {
         return expensiveOrders.size() > allOrders.size() / 2;
     }
 
+    /**
+     * This method differs from the first one in the lack
+     * of internal logic. Thus, generating unit tests for
+     * it seems to be useless.
+     *
+     * It is better to generate UnitTestBot integration tests
+     * that will check the service behaviour in interaction
+     * with the corresponding repository.
+     */
     public boolean isNotEmpty() {
+        // external call to be mocked
         List<Order> orders = orderRepository.findAll();
+
+        // internal logic
         return orders.size() > 0;
     }
 }
