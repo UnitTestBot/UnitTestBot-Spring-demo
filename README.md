@@ -2,10 +2,10 @@
 
 This is a set of examples demonstrating basic flow of UnitTestBot. 
 
-The settings of UnitTestBot we use to generate tests are shown in brackets: 
-    - SE (symbolic engine) or F (fuzzer) <br>
+The settings of UnitTestBot we use to generate tests are shown in brackets: <br>
+   - SE (symbolic engine) or F (fuzzer) <br>
    - Unit tests (U) or integration tests (I) <br>
-    - Spring Boot autoconfiguration is used (+) <br>
+   - Spring Boot autoconfiguration is used (+) <br>
 
 First examples show the features of UnitTestBot on projects without Spring:
 
@@ -25,5 +25,8 @@ Next examples show how UnitTestBot takes into account the Spring specific:
 
 7) `OrderController.isMajorityExpensive` (F, I, +) -> `OrderControllerTests`
 
+The last example shows that UnitTestBot is able to reset state between tests:
+
+8) `MutableService` (SE, U) -> `MutableServiceTests`
 
 All examples are provided with some comments clarifying what happens.
