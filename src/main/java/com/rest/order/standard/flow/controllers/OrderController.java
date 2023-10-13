@@ -17,8 +17,8 @@ public class OrderController {
      * This method is used to demonstrate how UnitTestBot
      * generates tests for REST controllers.
      *
-     * The main testing idea is to create customized
-     * `mockMvc` object and to call `perform` method on it.
+     * The main testing idea is to create the customized
+     * <code>mockMvc</code> object and to call the <code>perform</code> method on it.
      */
     @GetMapping(path = "/isMajorityExpensive")
     public boolean isMajorityExpensive(@RequestParam int threshold) {

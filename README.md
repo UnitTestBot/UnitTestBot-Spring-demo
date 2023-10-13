@@ -1,32 +1,35 @@
 # UnitTestBot Spring: demo
 
-This is a set of examples demonstrating basic flow of UnitTestBot. 
+This repository illustrates the [UnitTestBot](https://github.com/UnitTestBot/UTBotJava) main features related to generating tests for Spring-based code.
 
-The settings of UnitTestBot we use to generate tests are shown in brackets: <br>
-   - SE (symbolic engine) or F (fuzzer) <br>
-   - Unit tests (U) or integration tests (I) <br>
-   - Spring Boot autoconfiguration is used (+) <br>
+Here you can find the source code examples with comments as well as the resulting UnitTestBot-generated tests.
 
-First examples show the features of UnitTestBot on projects without Spring:
+For comparison, we also
+[provide tests](https://github.com/UnitTestBot/UnitTestBot-Spring-demo/tree/main/src/test/java/diffblue) generated 
+with [Diffblue Cover](https://www.diffblue.com/products/), the UnitTestBot major competitor.
 
-1) `IntComparator.max` (SE, U) -> `IntComparatorTests`
-2) `ArrayListVerifier.checkIfNotEmpty` (SE, U) -> `ArrayListVerifierTests`
-3) `CustomByteReader.readBytes` (SE, U) -> `CustomByteReaderTests`
+## How UnitTestBot generates tests for non-Spring projects
 
-Next examples show how UnitTestBot takes into account the Spring specific:
+| Source                               | Settings                           | Tests                    |
+|--------------------------------------|------------------------------------|--------------------------|
+| `IntComparator.max`                  | Symbolic execution<br/>Unit tests  | `IntComparatorTests`     |
+| `ArrayListVerifier.checkIfNotEmpty`  | Symbolic execution<br/>Unit tests  | `ArrayListVerifierTests` |
+| `CustomByteReader.readBytes`         | Symbolic execution<br/>Unit tests  | `CustomByteReaderTests`  |
 
-4) `OrderService.isMajorityExpensive` (SE, U) -> `OrderServiceUnitTests`
+## How UnitTestBot generates Spring-specific tests
 
-5) `OrderService.isNotEmpty` (SE, U) -> `OrderServiceUselessUnitTests`
-   `OrderService.isNotEmpty` (F, I, +) -> `OrderServiceIntegrationTests`
+| Source                                | Settings                                                                | Tests                                     |
+|---------------------------------------|-------------------------------------------------------------------------|-------------------------------------------|
+| `OrderService.isMajorityExpensive`    | Symbolic execution<br/>Unit tests                                       | `OrderServiceUnitTests`                   |
+| `OrderService.isNotEmpty`             | Symbolic execution<br/>Unit tests                                       | `OrderServiceUselessUnitTests`            |
+| `OrderService.isNotEmpty`             | _Fuzzing_<br/>_Integration tests_<br/>**Spring Boot autoconfiguration** | `OrderServiceIntegrationTests`            |
+| `CalculatorService.calcSquareSum`     | Symbolic execution<br/>Unit tests                                       | `CalculatorServiceNoConfigurationTests`   |
+| `CalculatorService.calcSquareSum`     | Symbolic execution<br/>Unit tests<br/>**Spring Boot autoconfiguration** | `CalculatorServiceWithConfigurationTests` |
+| `OrderController.isMajorityExpensive` | _Fuzzing_<br/>_Integration tests_<br/>**Spring Boot autoconfiguration** | `OrderControllerTests`                    |
 
-6) `CalculatorService.calcSquareSum` (SE, U) -> `CalculatorServiceNoConfigurationTests`
-   `CalculatorService.calcSquareSum` (SE, U, +) -> `CalculatorServiceWithConfigurationTests`
+## How UnitTestBot resets a state between tests
 
-7) `OrderController.isMajorityExpensive` (F, I, +) -> `OrderControllerTests`
+| Source            | Settings                           | Tests                    |
+|-------------------|------------------------------------|--------------------------|
+| `MutableService`  | Symbolic execution<br/>Unit tests  | `MutableServiceTests`    |
 
-The last example shows that UnitTestBot is able to reset state between tests:
-
-8) `MutableService` (SE, U) -> `MutableServiceTests`
-
-All examples are provided with some comments clarifying what happens.

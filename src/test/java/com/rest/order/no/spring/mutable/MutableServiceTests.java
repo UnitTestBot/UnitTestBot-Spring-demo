@@ -1,5 +1,6 @@
-package com.rest.order.mutable;
+package com.rest.order.no.spring.mutable;
 
+import com.rest.order.no.spring.mutable.MutableService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

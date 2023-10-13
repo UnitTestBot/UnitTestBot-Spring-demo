@@ -1,4 +1,4 @@
-package com.rest.order.mutable;
+package com.rest.order.no.spring.mutable;
 
 import org.springframework.stereotype.Service;
 

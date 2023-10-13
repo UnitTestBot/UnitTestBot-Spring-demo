@@ -3,11 +3,11 @@ package com.rest.order.no.spring.mocks;
 public class CustomByteReader {
     /**
      * This example demonstrates how UnitTestBot processes the external calls.
-     * As far as no implementation is given, it uses mocking.
+     * As far as no implementation is given, UnitTestBot uses mocking.
      *
      * Note that there are three ways to get an exception from this method.
-     * It is not so obvious looking on the implementation, but UnitTestBot
-     * has generated a test covering each problematic scenario.
+     * They are not so obvious if we look at the implementation, but UnitTestBot
+     * generates tests to cover each problematic scenario.
      */
     public static int readBytes(byte[] buffer, DataProvider dataProvider) {
         int bytesCount = 0;

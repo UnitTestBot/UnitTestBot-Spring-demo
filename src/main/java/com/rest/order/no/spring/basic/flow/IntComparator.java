@@ -3,13 +3,13 @@ package com.rest.order.no.spring.basic.flow;
 public class IntComparator {
 
     /**
-     * Trivial function to show UnitTestBot basic flow.
+     * A trivial function to show the UnitTestBot basic flow.
      *
-     * What we expect from tests?
-     * - two tests covering both execution branches
-     * - meaningful variable names: x, y, expected
-     * - test method names describing scenario under test
-     * - display names in IDE runner are pretty too
+     * <ul>What do we expect from tests?
+     * <li>two tests covering both execution branches</li>
+     * <li>meaningful variable names: <code>x</code>, <code>y</code>, <code>expected</code></li>
+     * <li>test method names describing scenario under test</li>
+     * <li>display names in an IDE runner are pretty too</li></ul>
      */
     public int max(int x, int y) {
         if (x > y) {

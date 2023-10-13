@@ -2,7 +2,7 @@ package diffblue;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import com.rest.order.mutable.MutableService;
+import com.rest.order.no.spring.mutable.MutableService;
 import org.junit.jupiter.api.Test;
 
 class MutableServiceTests {
